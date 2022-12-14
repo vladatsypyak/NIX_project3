@@ -3,17 +3,19 @@ import {store} from "../redux/store";
 import {countTime} from "../redux/actions";
 
 function Timer(props) {
-    const [time, setTime] = useState(15)
-    // const [timerOn, setTimerOn] = useState(true);
+    const [time, setTime] = useState(props.initialTime)
     useEffect(() => {
         let timer = setInterval(() => {
                 setTime((time)=>time - 1);
-                store.dispatch(countTime(time))
+                store.dispatch(countTime(time - 1))
             }, 1000);
 
         if (time === 0 || !props.isTimerOn) {
-            console.log(1)
             clearInterval(timer)
+        }
+        if (time === 0 ) {
+            clearInterval(timer)
+            props.showResult()
         }
         return () => clearInterval(timer);
     }, [time]);

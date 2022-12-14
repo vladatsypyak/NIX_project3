@@ -1,31 +1,129 @@
-.options{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.quiz{
-  width: 40%;
-  border-radius: 10px;
-  font-size: 24px;
-  border: 1px solid grey;
-}
-.quiz:hover{
-  border: 1px solid darkblue;
-  color: darkblue;
-  font-weight: bold;
-  cursor: pointer;
-}
-.chosen{
-  background-color: darkblue;
-  color: white;
-}
-.chosen:hover {
-  color: white;
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.progressbar{
-  height: 5px;
-  background-color: red;
+.quiz {
+    width: 45%;
+    border-radius: 10px;
+    font-size: 24px;
+    border: 1px solid #b2b9c3;
+    text-align: center;
+    color: #43436d;
+}
+
+.quiz:hover {
+    border: 1px solid #b2b9c3;
+    color: #2727cf;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2b9c3;
+}
+
+.chosen {
+    background-color: #2727cf;
+    color: white;
+}
+
+.chosen:hover {
+    color: white;
+}
+
+.progressbar {
+    height: 5px;
+    background-color: red;
+    border-radius: 1px;
+}
+
+.start {
+    padding: 10px;
+    font-size: 20px;
+    width: 80px;
+    background-color: #22c122;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: 150px auto 0;
+}
+
+.start:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.quiz_container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.next {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #302f2f;
+    color: white;
+    border-radius: 10px;
+    width: 75px;
+}
+
+.next:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.timer {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #302f2f;
+    color: white;
+    border-radius: 10px;
+    width: 75px;
+    text-align: center;
+}
+
+.current_round {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.of {
+    font-weight: 300;
+}
+
+.question {
+    text-align: center;
+    font-size: 26px;
+}
+
+.result_wrap {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 36px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    display: inline-block;
+    border-bottom: 1px solid lightblue;
+    padding: 5px 0;
+}
+.green{
+    background-color: #1bbd1b;
+}
+.yellow{
+    background-color: #caca00;
+}
+.orange{
+    background-color: orange;
 }
