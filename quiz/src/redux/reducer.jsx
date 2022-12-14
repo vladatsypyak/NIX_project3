@@ -1,4 +1,4 @@
-import {ADD_ANSWER_TO_TOTAL_RESULT, NEXT_ROUND} from "./actions";
+import {ADD_ANSWER_TO_TOTAL_RESULT, COUNT_TIME, NEXT_ROUND} from "./actions";
 
 const initialState = {
     quizData: [{
@@ -27,7 +27,9 @@ const initialState = {
             correct: "are"
         }],
     currentRound: 0,
-    result: []
+    result: [],
+    correctAnswers: 0,
+    time: 0
 }
 
 function quizApp(state = initialState, action) {
@@ -37,8 +39,14 @@ function quizApp(state = initialState, action) {
                currentRound: state.currentRound + 1
             });
         case ADD_ANSWER_TO_TOTAL_RESULT:
+
             return Object.assign({}, state, {
-                result: [...state.result, action.result]
+                result: [...state.result, action.result],
+                correctAnswers: action.result ? state.correctAnswers + 1 : state.correctAnswers
+            });
+        case COUNT_TIME:
+            return Object.assign({}, state, {
+                time: action.time,
             });
         default:
             return state

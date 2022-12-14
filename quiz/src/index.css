@@ -24,3 +24,8 @@
 .chosen:hover {
   color: white;
 }
+
+.progressbar{
+  height: 5px;
+  background-color: red;
+}
