@@ -1,11 +1,7 @@
 import {GET_CATS_FROM_API, GET_DOGS_FROM_API} from "./actions";
 
 const initialState = {
-    photos: [{
-        src: "She ___ a doctor",
-        options: ["is", "am", "were", "was"],
-        correct: "is"
-        },
+    photos: [
         ],
 
 }
@@ -15,27 +11,33 @@ function photoGramm(state = initialState, action) {
         case GET_DOGS_FROM_API:
             return Object.assign({}, state, {
               photos: [...action.dogs.map((el)=>{
-                  return {
-                      breed: el.bred_for,
-                      breed_group: el.breed_group,
-                      name: el.name,
-                      image:el.image,
-                      id: el.id,
-                      temperament: el.temperament,
-                      animal:  "dog"
+                  if(el.image && el.image.url){
+                      return {
+                          breed: el.bred_for,
+                          breed_group: el.breed_group,
+                          name: el.name,
+                          image:el.image,
+                          id: el.id,
+                          temperament: el.temperament,
+                          animal:  "dog"
 
+                      }
                   }
+
               }), ...state.photos]
             });
         case GET_CATS_FROM_API:
             return Object.assign({}, state, {
                 photos: [...action.cats.map((el)=>{
-                    return {
-                        breed: el.name,
-                        image:el.image,
-                        id: el.id,
-                        temperament: el.temperament,
-                        animal:  "cat"
+                    if(el.image && el.image.url){
+
+                        return {
+                            breed: el.name,
+                            image: el.image,
+                            id: el.id,
+                            temperament: el.temperament,
+                            animal: "cat"
+                        }
                     }
                 }), ...state.photos]
             });
