@@ -36,7 +36,7 @@ function photoGramm(state = initialState, action) {
               photos: [...action.dogs.map((el)=>{
                   if(el && el.image && el.image.url ){
                       return {
-                          breed: el.breed_group ? el.breed_group : "other",
+                          breed: el.name,
                           name: el.name,
                           image:el.image,
                           id: el.id,
