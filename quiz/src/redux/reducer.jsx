@@ -7,22 +7,22 @@ const initialState = {
         correct: "is"
         },
         {
-            question: "It ___ a doctor",
+            question: "It ___ a cat",
             options: ["am", "were", "is", "was"],
             correct: "is"
         },
         {
-            question: "He ___ a doctor",
-            options: ["am", "is", "were", "was"],
+            question: "He ___ a fireman",
+            options: ["am", "is", "were", "been"],
             correct: "is"
         },
         {
-            question: "I ___ a doctor",
+            question: "I ___ a teacher",
             options: ["am", "is", "were", "was"],
             correct: "am"
         },
         {
-            question: "We ___ a doctor",
+            question: "We ___ children",
             options: ["am", "is", "were", "are"],
             correct: "are"
         }],
