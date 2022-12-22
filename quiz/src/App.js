@@ -7,6 +7,7 @@ import Result from "./components/Result";
 import ProgressBar from "./components/ProgressBar";
 import Timer from "./components/Timer";
 import Start from "./components/Start";
+import Chart from "./components/Chart";
 
 function App() {
     const state = store.getState()
@@ -58,6 +59,7 @@ function App() {
                             <div className={"final_result"}>
                                 <Result result={store.getState().correctAnswers}
                                         initialTime={initialTime}/>
+                                <Chart correct={store.getState().correctAnswers}/>
                             </div>
                             :
                             <div className="quiz_container">

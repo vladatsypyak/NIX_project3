@@ -7,6 +7,8 @@ import {getCatsFromApi, getDogsFromApi, sortRandomly, setAnimalFilters} from "./
 import Photos from "./components/Photos";
 import Filters from "./components/Filters";
 import PaginatedItems from "./components/Pagination";
+import ImageUploading from 'react-images-uploading';
+
 
 
 function App() {
@@ -49,7 +51,7 @@ function App() {
     function handleBreedFilterChange(breed) {
         if(breed === "all"){
             setData(store.getState().photos)
-
+            return
         }
         console.log(breed)
         let selectedAnimals = store.getState().photos.filter((el)=>{
@@ -100,6 +102,7 @@ function App() {
             <Header showButton={!showFilter} onFiltersClick={onFiltersClick} onSearchChange={onSearchChange} />
             {showFilter ? <Filters onCloseFiltersClick={onCloseFiltersClick} handleAnimalFilterChange={handleAnimalFilterChange} handleBreedFilterChange={handleBreedFilterChange} /> : null}
             {data.length > 0 ? <PaginatedItems itemsPerPage={15} photos={data}/> : null}
+
             <Routes>
                 {/*<Route path="/" element={}/>*/}
             </Routes>

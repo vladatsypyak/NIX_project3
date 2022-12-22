@@ -127,3 +127,10 @@
 .orange{
     background-color: orange;
 }
+
+.chart{
+    margin: 0 auto;
+}
+.pie_container{
+    display: flex;
+}
