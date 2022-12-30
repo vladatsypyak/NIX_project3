@@ -60,7 +60,9 @@ function photoGramm(state = initialState, action) {
         case GET_CATS_FROM_API:
             return Object.assign({}, state, {
                 photos: [...action.cats.map((el) => {
+                    console.log(el)
                     if (el && el.image && el.image.url) {
+
                         return {
                             breed: el.name,
                             images: [el.image],

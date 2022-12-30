@@ -24,11 +24,15 @@ export default function  Main(){
                 .catch(err => console.error(err))
 
 
-            fetch('https://api.thecatapi.com/v1/breeds', {
+            fetch('https://62f39271a84d8c968126c2df.mockapi.io/cats_breed', {
                 method: 'GET',
             })
                 .then(response => response.json())
-                .then(r => store.dispatch(getCatsFromApi(r)))
+                .then(r => {
+                    console.log(r)
+                    store.dispatch(getCatsFromApi(r))
+                })
+
                 .then(()=> store.dispatch(sortRandomly()))
                 .then(() => setData(store.getState().photos))
                 .catch(err => console.error(err))

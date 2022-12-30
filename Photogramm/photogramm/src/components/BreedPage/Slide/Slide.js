@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
-import {store} from "../redux/store";
+import {store} from "../../../redux/store";
 import {useState} from "react";
-import UploadPhotoModal from "./UploadPhotoModal";
+import UploadPhotoModal from "../../UploadPhotoModal";
 import BtnSlider from "./BtnSlider";
 
 export default function Slide(props) {

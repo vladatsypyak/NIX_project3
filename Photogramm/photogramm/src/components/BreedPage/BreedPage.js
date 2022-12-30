@@ -1,6 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import {store} from "../../redux/store";
-import Slide from "../Slide";
+import Slide from "./Slide/Slide";
 
 export default function BreedPage() {
     const {id} = useParams();

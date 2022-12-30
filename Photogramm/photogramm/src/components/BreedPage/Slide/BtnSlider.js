@@ -1,6 +1,6 @@
 import React from "react";
-import leftArrow from "../assets/ledt-arrow.png";
-import rightArrow from "../assets/right-arrow.png";
+import leftArrow from "../../../assets/ledt-arrow.png";
+import rightArrow from "../../../assets/right-arrow.png";
 
 export default function BtnSlider({ direction, moveSlide, image }) {
 
