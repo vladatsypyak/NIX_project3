@@ -59,7 +59,6 @@ function App() {
                             <div className={"final_result"}>
                                 <Result result={store.getState().correctAnswers}
                                         initialTime={initialTime}/>
-                                <Chart correct={store.getState().correctAnswers}/>
                             </div>
                             :
                             <div className="quiz_container">

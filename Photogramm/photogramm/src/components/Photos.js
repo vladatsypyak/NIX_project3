@@ -19,7 +19,6 @@ export default function Photos(props) {
     }
 
     let rowsAmount = countRows();
-    console.log(rowsAmount)
 
     function getPhotosWithClasses() {
         let mediumNextIndex = 0
