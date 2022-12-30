@@ -42,7 +42,7 @@ export default function Slide(props) {
     }
 
     function onChange() {
-        setPhotos([...store.getState().photos.filter(el => el.id == id)[0].images])
+        setPhotos([...store.getState().photos.filter(el => el?.id == id)[0].images])
         setShowAddModal(false)
     }
 

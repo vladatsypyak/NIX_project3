@@ -9,7 +9,7 @@ import Filters from "./components/Filters";
 import PaginatedItems from "./components/Pagination";
 import ImageUploading from 'react-images-uploading';
 import UploadAnimal from "./components/UploadAnimal";
-import PhotoPage from "./components/PhotoPage";
+import BreedPage from "./components/BreedPage/BreedPage";
 import Main from "./components/Main";
 
 
@@ -23,7 +23,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main />}/>
 
-                <Route path="photo/:id" element={<PhotoPage />}/>
+                <Route path="photo/:id" element={<BreedPage />}/>
             </Routes>
         </div>
     );

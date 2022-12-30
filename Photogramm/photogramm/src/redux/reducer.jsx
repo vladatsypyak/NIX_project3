@@ -96,10 +96,13 @@ function photoGramm(state = initialState, action) {
             console.log(action.photo)
             return Object.assign({}, state, {
                 photos: state.photos.map(obj => {
-                    if(action.id == obj.id){
-                        console.log("+")
-                        obj.images = [ ...obj.images, {url: action.photo}]
+                    if(obj){
+                        if(action.id == obj.id){
+                            console.log("+")
+                            obj.images = [ ...obj.images, {url: action.photo}]
+                        }
                     }
+
                     return obj
                 })
             })

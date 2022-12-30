@@ -1,8 +1,8 @@
 import {Link, useParams} from "react-router-dom";
-import {store} from "../redux/store";
-import Slide from "./Slide";
+import {store} from "../../redux/store";
+import Slide from "../Slide";
 
-export default function PhotoPage() {
+export default function BreedPage() {
     const {id} = useParams();
     console.log(id)
     console.log(store.getState().photos)
@@ -18,7 +18,7 @@ export default function PhotoPage() {
             <div className="photo_page_header">
                 <div className="container">
                     <Link to={"/"} className="logo">
-                        <img src={require('../assets/logo.png')} alt=""/>
+                        <img src={require('../../assets/logo.png')} alt=""/>
                     </Link>
                 </div>
             </div>
