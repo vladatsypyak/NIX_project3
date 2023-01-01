@@ -1,7 +1,8 @@
 import ReactPaginate from "react-paginate";
 import {useState} from "react";
-import Photos from "./Photos";
-import {store} from "../redux/store";
+import Photos from "../MainPage/Photos/Photos";
+import {store} from "../../redux/store";
+import "./Pagination.css"
 
 export default function PaginatedItems({ itemsPerPage, photos }) {
     const [itemOffset, setItemOffset] = useState(0);

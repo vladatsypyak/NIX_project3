@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import "./Photos.css"
 
 export default function Photo(props) {
     const [showDesc, setShowDesc] = useState(false)

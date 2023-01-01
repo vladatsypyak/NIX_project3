@@ -1,6 +1,7 @@
-import {store} from "../redux/store";
-import {addAnimal, addPhoto} from "../redux/actions";
+import {store} from "../../../redux/store";
+import {addAnimal, addPhoto} from "../../../redux/actions";
 import {useState} from "react";
+import "./UploadAnimal.css"
 
 export default function UploadAnimal(props) {
     const [animal, setAnimal] = useState("")
@@ -50,7 +51,7 @@ export default function UploadAnimal(props) {
                             setPhotoUploaded(true)
                         }}
                     />
-                    {photoUploaded && <img className={"done_mark"} src={require("../assets/done.png")}/>}
+                    {photoUploaded && <img className={"done_mark"} src={require("../../../assets/done.png")}/>}
                 </div>
                 <button className={"add_file_btn black_btn"}
                         onClick={handleSubmitClick}>submit

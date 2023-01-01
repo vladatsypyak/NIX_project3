@@ -5,6 +5,8 @@ export const SET_ANIMAL_FILTERS = "SET_ANIMAL_FILTERS"
 export const ADD_ANIMAL = "ADD_ANIMAL"
 export const GET_PHOTO = "GET_PHOTO"
 export const ADD_PHOTO = "ADD_PHOTO"
+export const IS_SORTED = "IS_SORTED"
+
 
 
 
@@ -37,6 +39,9 @@ export function addAnimal (photo) {
 }
 export function addPhoto (photo, id) {
     return {type: ADD_PHOTO, photo, id}
+}
+export function changeIsSorted () {
+    return {type: IS_SORTED}
 }
 export function getPhoto (id) {
     return {type: GET_PHOTO, id}

@@ -1,0 +1,50 @@
+
+.add_file_window {
+    padding-top: 150px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.add_file_input {
+    display: block;
+    width: 250px;
+    background-color: #0000;
+    border: none;
+    border-bottom: 1px solid #b8b3b3;
+    margin: 0 auto 15px auto;
+    color: white;
+}
+
+.add_file_btn {
+    border-radius: 10px;
+    padding: 7px;
+    display: block;
+    color: white;
+
+}
+
+#animal_upload {
+    display: none;
+}
+.buttons_wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.buttons_wrap .flex_wrap {
+    justify-content: stretch;
+    gap: 10px;
+}
+
+.file_upload_label {
+    color: white;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.done_mark {
+    width: 40px;
+    height: 40px;
+}

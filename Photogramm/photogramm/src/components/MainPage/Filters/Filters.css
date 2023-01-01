@@ -1,0 +1,49 @@
+.filters_container {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 5;
+    width: 18%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 20px 30px 20px 20px;
+    background-color: #3f3c3c;
+    color: white;
+    height: 100%;
+
+}
+
+.animal_filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 2%;
+
+}
+
+.close img {
+    width: 35px;
+    height: 35px;
+}
+
+.filter_label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.filter_container {
+    margin-bottom: 20px;
+}
+.filter_btn {
+    border-bottom: 1px solid #DBDBDB;
+    background: none;
+    padding: 4px;
+    width: 55px;
+}

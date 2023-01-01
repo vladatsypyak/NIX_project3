@@ -1,6 +1,7 @@
 import {useState} from "react";
-import {store} from "../redux/store";
-
+import {store} from "../../../redux/store";
+import "./Filters.css"
+import CloseBtn from "../../shared/CloseBtn";
 export default function Filters(props){
     function handleChange(e) {
         if (e.target.checked){
@@ -19,7 +20,7 @@ export default function Filters(props){
     }
     return (
     <div className={"filters_container"}>
-        <button onClick={()=>props.onCloseFiltersClick()} className={"close"}><img src={require("../assets/close.png")} alt=""/></button>
+        <CloseBtn onClick={props.onCloseFiltersClick} className={"close"}/>
         <div onChange={handleChange} className="filter_container animal_filter">
             <p className={"filter_label"}>Category</p>
             <div className="filter_item">

@@ -1,0 +1,69 @@
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    width: 35%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+}
+.add_photo_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #909090;
+    box-shadow: 4px 3px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+.add_photo_btn:hover {
+    background-color: rgba(36, 36, 37, 0.38);
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide_btn_wrap {
+    height: 350px;
+    width: 200px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.btn-slide {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 2;
+    border-radius: 10px;
+
+}
+
+.slide_btn_image {
+    height: 350px;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+}
+
+.overlay {
+    height: 350px;
+    width: 200px;
+    background-color: rgba(38, 37, 37, 0.89);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+}

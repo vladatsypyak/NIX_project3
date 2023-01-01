@@ -2,7 +2,7 @@ import {
     ADD_ANIMAL,
     ADD_PHOTO,
     GET_CATS_FROM_API,
-    GET_DOGS_FROM_API,
+    GET_DOGS_FROM_API, IS_SORTED,
     SET_ANIMAL_FILTERS,
     SORT_RANDOMLY
 } from "./actions";
@@ -34,7 +34,8 @@ const initialState = {
         },
        
     ],
-    filters: []
+    filters: [],
+    isSorted: false
 
 }
 
@@ -60,7 +61,6 @@ function photoGramm(state = initialState, action) {
         case GET_CATS_FROM_API:
             return Object.assign({}, state, {
                 photos: [...action.cats.map((el) => {
-                    console.log(el)
                     if (el && el.image && el.image.url) {
 
                         return {
@@ -107,6 +107,10 @@ function photoGramm(state = initialState, action) {
 
                     return obj
                 })
+            })
+        case IS_SORTED:
+            return Object.assign({}, state, {
+                isSorted: true
             })
 
 
