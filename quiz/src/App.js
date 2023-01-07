@@ -54,7 +54,7 @@ function App() {
             <div className="container">
                 {!showQuiz ? <Start onClick={() => setShowQuiz(true)}/> :
                     <div>
-                        <ProgressBar width={(store.getState().currentRound + 1) / 5 * 100}/>
+                        <ProgressBar width={(store.getState().currentRound ) / 5 * 100}/>
                         {showResult ?
                             <div className={"final_result"}>
                                 <Result result={store.getState().correctAnswers}

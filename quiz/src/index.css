@@ -40,6 +40,7 @@ body{
     height: 5px;
     background-color: red;
     border-radius: 1px;
+    width: 100%;
 }
 
 .start {
@@ -107,11 +108,7 @@ body{
     font-size: 26px;
 }
 
-.result_wrap {
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 36px;
-}
+
 
 .bold {
     font-weight: bold;
@@ -142,5 +139,7 @@ body{
     box-shadow: 4px 4px 29px 16px rgba(220, 219, 219, 0.25);
     padding: 30px 60px;
     border-radius: 15px;
-    margin-top: 50px;
+    margin: 50px auto 0;
+    width: fit-content;
+    font-size: 36px;
 }
