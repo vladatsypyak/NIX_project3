@@ -81,12 +81,10 @@ function photoGramm(state = initialState, action) {
         case SET_ANIMAL_FILTERS:
             if (state.filters.includes(action.animal)) {
                 return Object.assign({}, state, {
-
                     filters: state.filters.filter((el) => el !== action.animal)
                 })
             }
             return Object.assign({}, state, {
-
                 filters: [...state.filters, action.animal]
             })
         case ADD_ANIMAL:

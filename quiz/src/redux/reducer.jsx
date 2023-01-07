@@ -41,7 +41,7 @@ function quizApp(state = initialState, action) {
         case ADD_ANSWER_TO_TOTAL_RESULT:
 
             return Object.assign({}, state, {
-                result: [...state.result, action.result],
+                result: [...state.result, {result: action.result, userAnswer: action.answer}],
                 correctAnswers: action.result ? state.correctAnswers + 1 : state.correctAnswers
             });
         case COUNT_TIME:

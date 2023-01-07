@@ -3,7 +3,7 @@ import {useState} from "react";
 import {store} from "./redux/store";
 import {addAnswerToTotalResult, nextRound} from "./redux/actions";
 import Quiz from "./components/Quiz";
-import Result from "./components/Result";
+import Result from "./components/Result/Result";
 import ProgressBar from "./components/ProgressBar";
 import Timer from "./components/Timer";
 import Start from "./components/Start";
@@ -24,7 +24,7 @@ function App() {
 
 
     function onNextClick() {
-        store.dispatch(addAnswerToTotalResult(checkOptionIsCorrect(chosenOption)))
+        store.dispatch(addAnswerToTotalResult(checkOptionIsCorrect(chosenOption), chosenOption))
         store.dispatch(nextRound())
         const round = store.getState().currentRound
         if (round > 4) {

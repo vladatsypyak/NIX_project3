@@ -50,6 +50,19 @@ export default function Main() {
 
     }
 
+    // function handleBreedFilterChange(breed) {
+    //     if (breed === "all") {
+    //         setData(store.getState().photos)
+    //         return
+    //     }
+    //     let selectedAnimals = store.getState().photos.filter((el) => {
+    //         if (el) {
+    //             return el.name === breed
+    //         }
+    //     })
+    //     setData(selectedAnimals)
+    //
+    // }
     function handleBreedFilterChange(breed) {
         if (breed === "all") {
             setData(store.getState().photos)
@@ -63,6 +76,7 @@ export default function Main() {
         setData(selectedAnimals)
 
     }
+
 
     function handleAnimalFilterChange(animal) {
 
@@ -115,8 +129,12 @@ export default function Main() {
                     onSearchChange={onSearchChange}/>
 
             {showFilter ?
-                <Filters onCloseFiltersClick={onCloseFiltersClick} handleAnimalFilterChange={handleAnimalFilterChange}
-                         handleBreedFilterChange={handleBreedFilterChange}/> : null}
+                <Filters onCloseFiltersClick={onCloseFiltersClick}
+                         handleAnimalFilterChange={handleAnimalFilterChange}
+                         handleBreedFilterChange={handleBreedFilterChange}
+                         data={data}/>
+
+                : null}
             {showAdd ? <UploadAnimal onSubmitClick={onSubmitClick} onChange={onDataChange}/> : null}
             {data.length > 0 ? <PaginatedItems itemsPerPage={15} photos={data}/> : null}
         </div>

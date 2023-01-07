@@ -10,8 +10,8 @@ export function nextRound () {
     return {type: NEXT_ROUND}
 }
 
-export function addAnswerToTotalResult (result) {
-    return {type: ADD_ANSWER_TO_TOTAL_RESULT, result}
+export function addAnswerToTotalResult (result, answer) {
+    return {type: ADD_ANSWER_TO_TOTAL_RESULT, result, answer}
 }
 
 export function countTime(time) {

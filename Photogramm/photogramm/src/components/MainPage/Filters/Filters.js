@@ -3,6 +3,7 @@ import {store} from "../../../redux/store";
 import "./Filters.css"
 import CloseBtn from "../../shared/CloseBtn";
 export default function Filters(props){
+    console.log(props.data)
     function handleChange(e) {
         if (e.target.checked){
             props.handleAnimalFilterChange(e.target.value, true)
@@ -18,6 +19,7 @@ export default function Filters(props){
         console.log(e.target.value)
         props.handleBreedFilterChange(e.target.value)
     }
+
     return (
     <div className={"filters_container"}>
         <CloseBtn onClick={props.onCloseFiltersClick} className={"close"}/>
@@ -38,8 +40,10 @@ export default function Filters(props){
             <p className={"filter_label"}>Breed</p>
             <select name="" id="">
                 <option>all</option>
-                {sortBreeds(store.getState().photos).map((el)=> {
-                  return <option>{el}</option>
+                {sortBreeds(props.data).map((el)=> {
+                    console.log(el)
+                    return <option>{el}</option>
+                  // return <option>{el?.breed}</option>
                 })}
             </select>
         </div>

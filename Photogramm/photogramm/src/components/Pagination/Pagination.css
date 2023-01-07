@@ -2,3 +2,11 @@
     margin: 20px auto 0;
     width: fit-content;
 }
+.pagination > li >  a{
+    color: black !important;
+}
+.pagination > .active > a {
+    color: white !Important;
+    background-color: #501f97 !Important;
+    border: solid 1px #5A4181 !Important;
+}
