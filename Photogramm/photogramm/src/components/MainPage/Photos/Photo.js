@@ -22,8 +22,8 @@ export default function Photo(props) {
 
                 onClick={handleClick} src={props.el.images[0].url} alt={props.el.name}/>
             {showDesc ? <div className={"desc"}>
-                <p> breed: {props.el.name}</p>
-                <p> temper: {props.el.temperament}</p>
+                <p> Breed: {props.el.name}</p>
+                <p> Temper: {props.el.temperament}</p>
             </div> : null}
         </Link>
 

@@ -46,4 +46,10 @@
     background: none;
     padding: 4px;
     width: 55px;
+    user-select: none;
+
+}
+.filter_btn:hover{
+    border-bottom: 1px solid #5e278e;
+
 }

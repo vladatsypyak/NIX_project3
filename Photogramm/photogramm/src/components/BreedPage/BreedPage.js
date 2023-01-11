@@ -7,9 +7,7 @@ import Logo from "../shared/Logo/Logo";
 export default function BreedPage() {
     const {id} = useParams();
     const item = store.getState().photos.filter(el =>  {
-        if(el){
-            return   el.id == id
-        }
+        return el && String(el.id) === String(id)
     })[0]
     return (
         <div>
@@ -24,7 +22,6 @@ export default function BreedPage() {
                 <div className="description_wrap">
                     <p className={"desc_title"}>Breed: {item.name}</p>
                     <p className={"desc_title"}>Temper: {item.temperament}</p>
-
                 </div>
             </div>
         </div>

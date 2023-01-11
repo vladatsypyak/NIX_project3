@@ -66,17 +66,14 @@ export default function Main() {
 
 
     function handleAnimalFilterChange(animal) {
-
         store.dispatch(setAnimalFilters(animal))
         let selectedAnimals = []
-
         selectedAnimals = store.getState().photos.filter((el) => {
             if (el) {
                 return store.getState().filters.includes(el.animal)
             }
         })
         setData(selectedAnimals)
-
         if (store.getState().filters.length === 0) {
             setData(store.getState().photos)
         }

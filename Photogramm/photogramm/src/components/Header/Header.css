@@ -2,8 +2,11 @@
     background-color: #212121;
     border-radius: 10px;
     color: white;
-}
 
+}
+.add_btn:hover{
+    opacity: 0.8;
+}
 
 .search_input {
     width: 25%;
@@ -12,6 +15,8 @@
     background-color: #353535;
     border: 1px solid #9E9E9E;
     justify-self: center;
+
+
 }
 .header {
     margin: 0 auto 80px;
@@ -27,4 +32,6 @@
     display: flex;
     gap: 15%;
     align-items: center;
+    user-select: none;
+
 }

@@ -19,8 +19,12 @@
     border-radius: 10px;
     padding: 7px;
     display: block;
-    color: white;
-
+    color: #5f278e;
+    border: 1px solid #5f278e;
+    user-select: none;
+}
+.add_file_btn:hover{
+    opacity: 0.8;
 }
 
 #animal_upload {
@@ -39,9 +43,15 @@
 
 .file_upload_label {
     color: white;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
+    background: #5f278e;
     padding: 7px;
     border-radius: 10px;
+    user-select: none;
+}
+.file_upload_label:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .done_mark {
