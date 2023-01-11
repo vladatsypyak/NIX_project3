@@ -12,10 +12,11 @@ export default function UploadAnimal(props) {
 
 
     function handleSubmitClick() {
+        let animalCategory = animal === "cat" || animal === "dog" ? animal : "other"
         store.dispatch(addAnimal({
             name: temper,
             breed: breed,
-            animal: animal,
+            animal: animalCategory,
             temper: temper,
             id: Math.random() * 100,
             images: [{
@@ -26,6 +27,8 @@ export default function UploadAnimal(props) {
         props.onChange()
         props.onSubmitClick()
     }
+
+
 
     return (
         <div className={"add_file_window"}>

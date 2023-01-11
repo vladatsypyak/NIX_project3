@@ -7,7 +7,7 @@ import Result from "./components/Result/Result";
 import ProgressBar from "./components/ProgressBar";
 import Timer from "./components/Timer";
 import Start from "./components/Start";
-import Chart from "./components/Chart";
+
 
 function App() {
     const state = store.getState()

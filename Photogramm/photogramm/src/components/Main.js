@@ -50,19 +50,6 @@ export default function Main() {
 
     }
 
-    // function handleBreedFilterChange(breed) {
-    //     if (breed === "all") {
-    //         setData(store.getState().photos)
-    //         return
-    //     }
-    //     let selectedAnimals = store.getState().photos.filter((el) => {
-    //         if (el) {
-    //             return el.name === breed
-    //         }
-    //     })
-    //     setData(selectedAnimals)
-    //
-    // }
     function handleBreedFilterChange(breed) {
         if (breed === "all") {
             setData(store.getState().photos)
@@ -102,7 +89,6 @@ export default function Main() {
     function searchByBreed(breed) {
         return store.getState().photos.filter((el) => {
                 if (el) {
-
                     const regex = new RegExp(breed.toUpperCase(), 'g'); // correct way
                     return regex.test(el.breed.toUpperCase())
                 }
