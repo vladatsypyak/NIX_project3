@@ -2,39 +2,7 @@
 body{
     font-family: 'Inter', sans-serif;
 }
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
 
-.quiz {
-    width: 45%;
-    border-radius: 10px;
-    font-size: 24px;
-    border: 1px solid #b2b9c3;
-    text-align: center;
-    color: #43436d;
-}
-
-.quiz:hover {
-    border: 1px solid #b2b9c3;
-    color: #2727cf;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 3px 3px 10px #b2b9c3;
-}
-
-.chosen {
-    background-color: #2727cf;
-    color: white;
-}
-
-.chosen:hover {
-    color: white;
-}
 
 .progressbar {
     height: 5px;
@@ -61,44 +29,6 @@ body{
     opacity: 0.8;
 }
 
-.quiz_container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-.next {
-    display: block;
-    margin-left: auto;
-    padding: 10px;
-    background-color: #302f2f;
-    color: white;
-    border-radius: 10px;
-    width: 75px;
-}
-
-.next:hover {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.timer {
-    display: block;
-    margin-left: auto;
-    padding: 10px;
-    background-color: #302f2f;
-    color: white;
-    border-radius: 10px;
-    width: 75px;
-    text-align: center;
-}
-
-.current_round {
-    text-align: center;
-    font-weight: 600;
-    font-size: 24px;
-}
-
 .of {
     font-weight: 300;
 }
@@ -107,8 +37,6 @@ body{
     text-align: center;
     font-size: 26px;
 }
-
-
 
 .bold {
     font-weight: bold;
@@ -119,15 +47,6 @@ body{
     border-bottom: 1px solid #6E26CA;
     padding: 5px 0;
 }
-.green{
-    background-color: #1bbd1b;
-}
-.yellow{
-    background-color: #caca00;
-}
-.orange{
-    background-color: orange;
-}
 
 .chart{
     margin: 0 auto;
@@ -135,11 +54,4 @@ body{
 .pie_container{
     display: flex;
 }
-.result_wrap{
-    box-shadow: 4px 4px 29px 16px rgba(220, 219, 219, 0.25);
-    padding: 30px 60px;
-    border-radius: 15px;
-    margin: 50px auto 0;
-    width: fit-content;
-    font-size: 36px;
-}
+

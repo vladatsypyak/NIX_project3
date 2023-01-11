@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
-import {store} from "../redux/store";
-import {countTime} from "../redux/actions";
+import {store} from "../../redux/store";
+import {countTime} from "../../redux/actions";
+import "./Timer.css"
 
 function Timer(props) {
     const [time, setTime] = useState(props.initialTime)

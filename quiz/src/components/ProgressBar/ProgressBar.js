@@ -1,3 +1,4 @@
+import "./ProgressBar.css"
 function ProgressBar(props) {
     console.log(props)
     const fillerStyle = {
